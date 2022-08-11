@@ -1,10 +1,11 @@
 // Global SCSS-files imports
 @import './vars';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import './reset';
 @import './global';
 
 // Sections or Pages SCSS-files imports
-// @import './header';
+@import './header';
 // @import './footer';
 
 // Libs

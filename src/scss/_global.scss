@@ -5,10 +5,6 @@
     margin: 0 auto;
     padding: 0 $containerSidePadding + px;
 
-    @media (max-width: $breakpoint1450) {
-        max-width: 1200px;
-    }
-
     @media (max-width: $breakpoint992) {
         max-width: 970px;
     }
@@ -24,6 +20,8 @@
 
 // Body Locked
 body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $bgColor;
     &.locked {
         overflow: hidden;
     }
