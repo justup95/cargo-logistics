@@ -38,3 +38,15 @@ body {
         opacity: 1;
     }
 }
+
+@keyframes scroll {
+    0% {
+        top: 6px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 18px;
+        opacity: 0;
+    }
+}

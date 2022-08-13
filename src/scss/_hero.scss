@@ -1,0 +1,105 @@
+.hero {
+    background-image: url(../img/hero-img@x1.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 155px;
+    padding-bottom: 220px;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .hero {
+    background-image: url(../img/hero-img@x2.jpg);
+  }
+}
+
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 45px;
+  margin: 0 auto;
+  padding: 45px 70px 45px 70px;
+  max-width: 920px;
+  border: 1px solid $brandColor;
+  @media (max-width: $breakpoint992) {
+    padding: 30px 50px 30px 50px;
+    row-gap: 20px;
+    max-width: 720px;
+  }
+  @media (max-width: $breakpoint768) {
+    row-gap: 20px;
+    padding: 24px 30px 24px 30px;
+    max-width: 520px;
+  }
+  @media (max-width: $breakpoint480) {
+    padding: 20px 18px 20px 18px;
+    row-gap: 10px;
+  }
+}
+
+.hero__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $whiteColor;
+  @media (max-width: $breakpoint992) {
+    font-size: 55px;
+    line-height: 120%;
+  }
+  @media (max-width: $breakpoint768) {
+    font-size: 35px;
+    line-height: 120%;
+  }
+  @media (max-width: $breakpoint480) {
+    font-size: 22px;
+    line-height: 120%;
+  }
+}
+.hero__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  @media (max-width: $breakpoint480) {
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+.hero__btn {
+    display: block;
+    width: 18px;
+    height: 30px;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    transform:translate(-50%);
+    bottom: 50px;
+    border: 2px solid $whiteColor;
+    border-radius: 9px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 6px;
+        top: 6px;
+        left: 7px;
+        transform:translate(-50%);
+        background-color: $whiteColor;
+        border-radius: 3px;
+        animation: scroll 2s infinite;
+    }
+}
+

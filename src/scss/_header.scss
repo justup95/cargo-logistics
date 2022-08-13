@@ -139,6 +139,9 @@ nav {
   display: flex;
   gap: 30px;
   // .menu__item
+  @media (max-width: $breakpoint992) {
+    gap: 15px;
+  }
   &__item {
     // margin-left: 25px;
   }
