@@ -1,0 +1,108 @@
+.about-us {
+  padding-top: 80px;
+  padding-bottom: 82px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    max-width: 410px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $brandColorSecond;
+  }
+}
+.about-us__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-us__info {
+    max-width: 450px;
+    padding-right: 5px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 6px;
+    left: 0;
+    top: 0;
+    background-color: $brandColor;
+  }
+}
+.about-us__title {
+  margin-top: 46px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $whiteColor;
+}
+.about-us__text {
+  margin-top: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: $whiteColor;
+}
+.about-us__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 600px;
+  
+}
+.about-us__item {
+  width: 200px;
+  height: 160px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $whiteColor;
+  border: 0.25px solid $brandColor;
+  border-collapse: collapse;
+  &:last-child {
+    background-color: transparent;
+    color: transparent;
+    border: transparent;
+  }
+}
+.about-us__item-num {
+  margin-top: 23px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $bgColor;
+}
+.about-us__item-title {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+.about-us__item-text {
+  margin-top: 15px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #000000;
+}
+.about-us__img {
+    width: 100%;
+    object-fit: cover;
+}

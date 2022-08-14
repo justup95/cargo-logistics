@@ -1,0 +1,103 @@
+.services {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @media (max-width: $breakpoint768) {
+    padding-top: 40px;
+    padding-bottom: 49px;
+  }
+}
+
+.services__title {
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $whiteColor;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 6px;
+    background-color: $brandColor;
+    top: -40px;
+    left: 0;
+    @media (max-width: $breakpoint768) {
+        top: -13px;
+    }
+    @media (max-width: 540px) {
+      display: none;
+    }
+  }
+  @media (max-width: $breakpoint768) {
+    font-size: 28px;
+    line-height: 120%;
+    margin-top: 0;
+  }
+  @media (max-width: 540px) {
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+  }
+}
+.services__items {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media (max-width: $breakpoint768) {
+    margin-top: 40px;
+  }
+}
+.services__item {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+    @media (max-width: $breakpoint768) {
+        width: 33%;
+    }
+    @media (max-width: 540px) {
+        width: 49%;
+    }
+}
+.services__item-link {
+  width: 276px;
+  align-items: center;
+  text-align: center;
+  background-color: $brandColorSecond;
+  color: $whiteColor;
+  border: 1px solid $bgColor;
+  svg {
+    margin-top: 35px;
+    @media (max-width: 540px) {
+        margin-top: 25px;
+    }
+  }
+  &:hover {
+    background-color: $brandColor;
+    transition: 0.3s all ease;
+    circle {
+      fill: white;
+      transition: 0.3s all ease;
+    }
+    path {
+      fill: #2f343a;
+      transition: 0.3s all ease;
+    }
+  }
+}
+
+.services__text {
+  margin-top: 23px;
+  margin-bottom: 45px;
+  align-items: center;
+  text-align: center;
+  @media (max-width: 540px) {
+    font-size: 14px;
+    line-height: 120%;
+    margin-bottom: 35px;
+  }
+}

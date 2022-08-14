@@ -1,0 +1,241 @@
+.slider {
+  background-color: $brandColorSecond;
+  @media (max-width: 540px) {
+    background-color: $bgColor;
+  }
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+.slider__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-bottom: 112px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 410px;
+    height: 561px;
+    background-color: $bgColor;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    z-index: -5;
+    @media (max-width: 540px) {
+        display: none;
+    }
+  }
+  @media (max-width: $breakpoint992) {
+    padding-top: 60px;
+    padding-bottom: 69px;
+  }
+  @media (max-width: $breakpoint768) {
+    padding-top: 40px;
+    padding-bottom: 49px;
+  }
+  @media (max-width: 540px) {
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+}
+
+.slider__info {
+  max-width: 445px;
+  @media (max-width: $breakpoint992) {
+    max-width: 283px;
+  }
+  @media (max-width: 540px) {
+    max-width: 100%;
+  }
+}
+.slider__title {
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $whiteColor;
+  @media (max-width: $breakpoint768) {
+    font-size: 28px;
+    line-height: 120%;
+  }
+  @media (max-width: 540px) {
+    margin-top: 20px;
+  }
+}
+.slider__text {
+  margin-top: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: $whiteColor;
+  @media (max-width: $breakpoint768) {
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+.slider__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 220px;
+  height: 55px;
+  background: #c8a35f;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  &:hover {
+    opacity: 0.5;
+    transition: 0.3s all ease;
+  }
+  @media (max-width: $breakpoint768) {
+    margin-top: 74px;
+  }
+  @media (max-width: 540px) {
+    max-width: 100%;
+    margin-top: 50px;
+  }
+}
+
+.slider__picture {
+  width: 100%;
+  margin-top: auto;
+  margin-left: 8%;
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 3%;
+    margin-left: 16%;
+  }
+  @media (max-width: $breakpoint768) {
+    margin-top: auto;
+    margin-bottom: 5%;
+    margin-left: 0;
+  }
+  @media (max-width: 540px) {
+    display: none;
+  }
+}
+.slider__img {
+  width: 100%;
+  max-width: 445px;
+  object-fit: cover;
+  @media (max-width: $breakpoint992) {
+    max-width: 380px;
+  }
+}
+
+.slider-button-next,
+.slider-button-prev {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+  width: 160px;
+  height: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $brandColor;
+  z-index: 20;
+  &:hover {
+    opacity: 0.5;
+    transition: 0.3s all ease;
+  }
+  @media (max-width: 540px) {
+    display: none;
+  }
+}
+
+.slider-button-next {
+  position: absolute;
+  right: 0;
+  top: 160px;
+  @media (max-width: $breakpoint992) {
+    top: 106px;
+  }
+  @media (max-width: $breakpoint768) {
+    top: 72px;
+  }
+}
+.slider-button-prev {
+  position: absolute;
+  right: 5px;
+  bottom: 132px;
+  @media (max-width: $breakpoint992) {
+    bottom: 71px;
+  }
+  @media (max-width: $breakpoint768) {
+    bottom: 48px;
+  }
+}
+
+.swiper-button-disabled{
+    opacity: 0.5;
+}
+
+.slider-scrollbar {
+  position: absolute;
+  background-color: transparent;
+  width: 270px;
+  height: 6px;
+  border-radius: 0;
+  top: 115px;
+  left: 0;
+  z-index: 10;
+  @media (max-width: $breakpoint992) {
+    top: 65px;
+  }
+  @media (max-width: 540px) {
+    display: none;
+  }
+  
+}
+
+.swiper-scrollbar-drag {
+  background-color: $brandColor;
+  width: 90px;
+  height: 6px;
+  border-radius: 0;
+}
+
+.slider-scrollbar .swiper-scrollbar-horizontal {
+  top: 0;
+  right: 0;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $brandColor;
+}
+
+.swiper-pagination {
+  display: none;
+  @media (max-width: 540px) {
+    display: block;
+  }
+}

@@ -42,3 +42,36 @@ function burgerMenu() {
   }
   window.addEventListener('scroll', fixedNav)
   
+
+
+// Swiper
+const swiper = new Swiper('.swiper', {
+  // Navigation arrows
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.slider-button-next',
+    prevEl: '.slider-button-prev',
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.slider-scrollbar',
+  },
+  
+  
+//   // Responsive breakpoints
+//   breakpoints: {
+//   // when window width is >= 320px
+//   320: {
+//     slidesPerView: 3,
+//     spaceBetween: 20
+//   },
+//   // when window width is >= 480px
+//   480: {
+//     slidesPerView: 3,
+//     spaceBetween: 30
+//   },
+// }
+});
