@@ -1,25 +1,39 @@
 .about-us {
   padding-top: 80px;
   padding-bottom: 82px;
+  margin-bottom: 80px;
   position: relative;
   &::before {
     position: absolute;
     content: "";
-    max-width: 410px;
+    width: 410px;
     height: 100%;
+    top: 0;
     left: 50%;
+    z-index: -2;
     transform: translateX(-50%);
     background-color: $brandColorSecond;
+    @media (max-width: $breakpoint480) {
+      display: none;
+    }
+  }
+  @media (max-width: 1200px) {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 40px;
   }
 }
 .about-us__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: $breakpoint768) {
+    flex-wrap: wrap;
+  }
 }
 .about-us__info {
-    max-width: 450px;
-    padding-right: 5px;
+  max-width: 450px;
+  padding-right: 5px;
   position: relative;
   &::before {
     content: "";
@@ -29,6 +43,13 @@
     left: 0;
     top: 0;
     background-color: $brandColor;
+    @media (max-width: 1200px) {
+      top: -83px;
+    }
+  }
+  @media (max-width: $breakpoint768) {
+    max-width: 100%;
+    margin-bottom: 30px;
   }
 }
 .about-us__title {
@@ -40,6 +61,10 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $whiteColor;
+  @media (max-width: $breakpoint768) {
+    font-size: 28px;
+    line-height: 120%;
+  }
 }
 .about-us__text {
   margin-top: 30px;
@@ -54,25 +79,60 @@
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 600px;
-  
+  @media (max-width: 1200px) {
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  @media (max-width: $breakpoint768) {
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+  @media (max-width: $breakpoint480) {
+    width: 100%;
+    gap: 10px;
+  }
 }
 .about-us__item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   width: 200px;
   height: 160px;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+
   background-color: $whiteColor;
-  border: 0.25px solid $brandColor;
-  border-collapse: collapse;
+  box-shadow: 0.25px 0 0 0 $brandColor, 0 0.25px 0 0 $brandColor,
+    0.25px 0 0 0 $brandColor,
+    /* Just to fix the corner */ 0.25px 0 0 0 $brandColor inset,
+    0 0.25px 0 0 $brandColor inset;
+
   &:last-child {
     background-color: transparent;
     color: transparent;
-    border: transparent;
+    box-shadow: 0.25px 0 0 0 transparent, 0 0.25px 0 0 transparent,
+      0.25px 0 0 0 transparent,
+      /* Just to fix the corner */ 0.25px 0 0 0 transparent inset,
+      0 0.25px 0 0 transparent inset;
+  }
+  @media (max-width: 1200px) {
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(6) {
+      display: none;
+    }
+    width: 300px;
+  }
+  @media (max-width: $breakpoint992) {
+    width: 255px;
+  }
+  @media (max-width: $breakpoint768) {
+    width: 100%;
   }
 }
 .about-us__item-num {
-  margin-top: 23px;
   font-style: normal;
   font-weight: 700;
   font-size: 64px;
@@ -81,9 +141,12 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $bgColor;
+  @media (max-width: $breakpoint480) {
+    font-size: 44px;
+    line-height: 120%;
+  }
 }
 .about-us__item-title {
-  margin-top: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -103,6 +166,6 @@
   color: #000000;
 }
 .about-us__img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }

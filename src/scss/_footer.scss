@@ -1,4 +1,51 @@
 // Footer
-footer {
-    display: block;
+.footer {
+  padding-top: 60px;
+  padding-bottom: 55px;
+  background-color: $brandColor;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero__img {
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+.footer__contacts-adress {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $whiteColor;
+  opacity: 0.8;
+}
+
+.footer__contacts-email {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $bgColor;
+}
+
+.footer__contacts-tel {
+  column-gap: 10px;
+}
+
+.footer__copyright {
+    margin-top: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #f2f2f2;
 }

@@ -1479,15 +1479,18 @@ nav {
 .about-us {
   padding-top: 80px;
   padding-bottom: 82px;
+  margin-bottom: 80px;
   position: relative;
 }
 
 .about-us::before {
   position: absolute;
   content: "";
-  max-width: 410px;
+  width: 410px;
   height: 100%;
+  top: 0;
   left: 50%;
+  z-index: -2;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -1555,28 +1558,36 @@ nav {
 }
 
 .about-us__item {
-  width: 200px;
-  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  width: 200px;
+  height: 160px;
+  justify-content: center;
   background-color: #ffffff;
-  border: 0.25px solid #C8A35F;
-  border-collapse: collapse;
+  -webkit-box-shadow: 0.25px 0 0 0 #C8A35F, 0 0.25px 0 0 #C8A35F, 0.25px 0 0 0 #C8A35F, 0.25px 0 0 0 #C8A35F inset, 0 0.25px 0 0 #C8A35F inset;
+          box-shadow: 0.25px 0 0 0 #C8A35F, 0 0.25px 0 0 #C8A35F, 0.25px 0 0 0 #C8A35F, 0.25px 0 0 0 #C8A35F inset, 0 0.25px 0 0 #C8A35F inset;
 }
 
 .about-us__item:last-child {
   background-color: transparent;
   color: transparent;
-  border: transparent;
+  -webkit-box-shadow: 0.25px 0 0 0 transparent, 0 0.25px 0 0 transparent, 0.25px 0 0 0 transparent, 0.25px 0 0 0 transparent inset, 0 0.25px 0 0 transparent inset;
+          box-shadow: 0.25px 0 0 0 transparent, 0 0.25px 0 0 transparent, 0.25px 0 0 0 transparent, 0.25px 0 0 0 transparent inset, 0 0.25px 0 0 transparent inset;
 }
 
 .about-us__item-num {
-  margin-top: 23px;
   font-style: normal;
   font-weight: 700;
   font-size: 64px;
@@ -1588,7 +1599,6 @@ nav {
 }
 
 .about-us__item-title {
-  margin-top: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1613,6 +1623,113 @@ nav {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.pointer-events-none {
+  position: absolute;
+  background: #393f47;
+  opacity: 0.6;
+  z-index: 10;
+}
+
+.pointer-events-none:hover {
+  background: transparent;
+  opacity: 1;
+  -webkit-transition: 3s all ease;
+  -o-transition: 3s all ease;
+  transition: 3s all ease;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 55px;
+  background-color: #C8A35F;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 500px;
+}
+
+.footer__contacts-adress {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.footer__contacts-email {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #2F343A;
+}
+
+.footer__contacts-tel {
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.footer__copyright {
+  margin-top: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #f2f2f2;
+}
+
+@media (max-width: 1200px) {
+  .about-us {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+  }
+
+  .about-us__info::before {
+    top: -83px;
+  }
+
+  .about-us__items {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .about-us__item {
+    width: 300px;
+  }
+
+  .about-us__item:nth-child(3),
+  .about-us__item:nth-child(4),
+  .about-us__item:nth-child(6) {
+    display: none;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -1663,6 +1780,10 @@ nav {
 
   .slider-scrollbar {
     top: 65px;
+  }
+
+  .about-us__item {
+    width: 255px;
   }
 }
 
@@ -1736,6 +1857,33 @@ nav {
 
   .services__item {
     width: 33%;
+  }
+
+  .about-us__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .about-us__info {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-us__title {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  .about-us__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .about-us__item {
+    width: 100%;
   }
 }
 
@@ -1980,6 +2128,20 @@ nav {
 
   .hero__text {
     font-size: 14px;
+    line-height: 120%;
+  }
+
+  .about-us::before {
+    display: none;
+  }
+
+  .about-us__items {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .about-us__item-num {
+    font-size: 44px;
     line-height: 120%;
   }
 }

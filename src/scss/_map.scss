@@ -1,0 +1,42 @@
+.map {
+//   pointer-events: none;
+//   background: #393f47;
+//   opacity: 0.6;
+//   width: 100%;
+//   height: 450px;
+}
+
+// #wrapMap {
+//   position: relative;
+//   cursor: help;
+//   overflow: hidden;
+//   border-width: 1px;
+//   border-style: solid;
+//   border-color: rgb(204, 204, 204);
+//   border-image: initial;
+// }
+// .mapTitle {
+//   position: absolute;
+//   z-index: 1000;
+//   box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+//   display: none;
+//   padding: 5px 20px;
+//   border-radius: 5px;
+//   background: rgb(255, 255, 255);
+//   border-width: 1px;
+//   border-style: solid;
+//   border-color: rgb(204, 204, 204);
+//   border-image: initial;
+// }
+
+.pointer-events-none {
+  position: absolute;
+  background: #393f47;
+  opacity: 0.6;
+  z-index: 10;
+  &:hover{
+    background: transparent;
+    opacity: 1;
+    transition: 3s all ease;
+  }
+}
