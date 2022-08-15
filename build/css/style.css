@@ -1626,6 +1626,16 @@ nav {
      object-fit: cover;
 }
 
+.map__title {
+  opacity: 0;
+  color: transparent;
+  position: absolute;
+}
+
+.map iframe {
+  width: 100%;
+}
+
 .pointer-events-none {
   position: absolute;
   background: #393f47;
