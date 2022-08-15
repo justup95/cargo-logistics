@@ -46,6 +46,9 @@
     @media (max-width: 1200px) {
       top: -83px;
     }
+    @media (max-width: $breakpoint768) {
+      top: 0;
+    }
   }
   @media (max-width: $breakpoint768) {
     max-width: 100%;
