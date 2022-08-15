@@ -22,6 +22,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: $bgColor;
+    line-height: 0;
     &.locked {
         overflow: hidden;
     }
